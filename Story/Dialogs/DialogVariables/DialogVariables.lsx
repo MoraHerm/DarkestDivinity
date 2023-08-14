@@ -20,6 +20,20 @@
                     <attribute id="type" value="Int" type="23" />
                 </node>
                 <node id="DialogVariable">
+                    <attribute id="DefaultValue" value="0" type="23" />
+                    <attribute id="Description" value="" type="23" />
+                    <attribute id="UUID" value="5151191a-8a7b-44ff-836f-43ec419c979b" type="31" />
+                    <attribute id="name" value="DDOD_Adventurer_TrainPrice_days" type="22" />
+                    <attribute id="type" value="Int" type="23" />
+                </node>
+                <node id="DialogVariable">
+                    <attribute id="DefaultValue" value="0" type="23" />
+                    <attribute id="Description" value="" type="23" />
+                    <attribute id="UUID" value="f5eb2dd3-19c7-4f01-be03-da21192ee2f5" type="31" />
+                    <attribute id="name" value="DDOD_Adventurer_TrainPrice_gold" type="22" />
+                    <attribute id="type" value="Int" type="23" />
+                </node>
+                <node id="DialogVariable">
                     <attribute id="DefaultValue" value="" type="23" />
                     <attribute id="Description" value="" type="23" />
                     <attribute id="UUID" value="318f05a4-e390-4ba8-bb76-7b6401b33821" type="31" />

@@ -63,6 +63,7 @@ GameStarted("HubLocation",1)
 THEN
 DB_IsPlayer(CHARACTERGUID_S_Player_Frederick_1434386d-a57b-4107-a8d4-27d934d49e49);
 PROC_updatePlayersCharactersStatus(CHARACTERGUID_S_Player_Frederick_1434386d-a57b-4107-a8d4-27d934d49e49);
+
 IF
 GameStarted("HubLocation",0)
 THEN
