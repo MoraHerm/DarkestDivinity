@@ -1,0 +1,6 @@
+
+
+### Compile("D:/Program Files (x86)/Steam/steamapps/common/Divinity Original Sin 2/DefEd/Data/Mods/DarkestDivinity_OriginalDungeon_d75bae5a-a649-493e-bd86-ec27bf349cc0\Story/story.div","r+")
+DeleteAllData
+
+0 error(s), 0 warning(s). Compilation ended.

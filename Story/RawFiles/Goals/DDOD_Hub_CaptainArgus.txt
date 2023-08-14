@@ -1,0 +1,18 @@
+Version 1
+SubGoalCombiner SGC_AND
+INITSECTION
+//CHARACTERGUID_DDOD_Hub_Guard_CaptainArgus_67cd4295-fb03-44ad-b09c-e7a547b57f23
+
+DB_transitionSignsMarkers("Hub_SignRoad");
+DB_transitionSignsMarkers("Forest_1_SignRoad");
+CharacterAddGold(CHARACTERGUID_DDOD_Hub_Guard_CaptainArgus_67cd4295-fb03-44ad-b09c-e7a547b57f23,120);
+KBSECTION
+IF
+ObjectFlagSet("CaptainMarkRoadSigns",_char,_id)
+AND
+DB_transitionSignsMarkers(_markerId)
+THEN
+ProcShowMarker((CHARACTERGUID)_char,_markerId);
+EXITSECTION
+
+ENDEXITSECTION

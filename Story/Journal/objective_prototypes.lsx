@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<save>
+    <header version="2" />
+    <version major="3" minor="6" revision="6" build="0" />
+    <region id="Objectives">
+        <node id="root">
+            <children>
+                <node id="Objective">
+                    <attribute id="Description" value="Make light with torch" handle="ls::TranslatedStringRepository::s_HandleUnknown" type="28" />
+                    <attribute id="ObjectiveID" value="LightTorch" type="22" />
+                    <attribute id="Priority" value="2" type="4" />
+                </node>
+                <node id="Objective">
+                    <attribute id="Description" value="Eat food" handle="ls::TranslatedStringRepository::s_HandleUnknown" type="28" />
+                    <attribute id="ObjectiveID" value="EatFood" type="22" />
+                    <attribute id="Priority" value="2" type="4" />
+                </node>
+                <node id="Objective">
+                    <attribute id="Description" value="Meet food merchant" handle="ls::TranslatedStringRepository::s_HandleUnknown" type="28" />
+                    <attribute id="ObjectiveID" value="MeetFoodMerchant" type="22" />
+                    <attribute id="Priority" value="1" type="4" />
+                    <children>
+                        <node id="Markers">
+                            <attribute id="Markers" value="Hub_FoodMerchant" type="22" />
+                        </node>
+                    </children>
+                </node>
+                <node id="Objective">
+                    <attribute id="Description" value="Meet equipment merchant" handle="ls::TranslatedStringRepository::s_HandleUnknown" type="28" />
+                    <attribute id="ObjectiveID" value="MeetEquipmentMerchant" type="22" />
+                    <attribute id="Priority" value="1" type="4" />
+                    <children>
+                        <node id="Markers">
+                            <attribute id="Markers" value="Hub_EquipmentMerchant" type="22" />
+                        </node>
+                    </children>
+                </node>
+                <node id="Objective">
+                    <attribute id="Description" value="Meet expidition leader" handle="ls::TranslatedStringRepository::s_HandleUnknown" type="28" />
+                    <attribute id="ObjectiveID" value="MeetExpeditionLeader" type="22" />
+                    <attribute id="Priority" value="1" type="4" />
+                    <children>
+                        <node id="Markers">
+                            <attribute id="Markers" value="Hub_ExpiditionLeader" type="22" />
+                        </node>
+                    </children>
+                </node>
+                <node id="Objective">
+                    <attribute id="Description" value="Get starting supplies from the chest" handle="ls::TranslatedStringRepository::s_HandleUnknown" type="28" />
+                    <attribute id="ObjectiveID" value="GetRewardChest" type="22" />
+                    <attribute id="Priority" value="2" type="4" />
+                    <children>
+                        <node id="Markers">
+                            <attribute id="Markers" value="Hub_RewardChest" type="22" />
+                        </node>
+                    </children>
+                </node>
+                <node id="Objective">
+                    <attribute id="Description" value="Hire figther at camp" handle="ls::TranslatedStringRepository::s_HandleUnknown" type="28" />
+                    <attribute id="ObjectiveID" value="FightersCamp" type="22" />
+                    <attribute id="Priority" value="3" type="4" />
+                    <children>
+                        <node id="Markers">
+                            <attribute id="Markers" value="Hub_FightersCamp" type="22" />
+                        </node>
+                    </children>
+                </node>
+                <node id="Objective">
+                    <attribute id="Description" value="" handle="ls::TranslatedStringRepository::s_HandleUnknown" type="28" />
+                    <attribute id="ObjectiveID" value="Done_1" type="22" />
+                    <attribute id="Priority" value="100" type="4" />
+                </node>
+                <node id="Objective">
+                    <attribute id="Description" value="" handle="ls::TranslatedStringRepository::s_HandleUnknown" type="28" />
+                    <attribute id="ObjectiveID" value="Done_2" type="22" />
+                    <attribute id="Priority" value="100" type="4" />
+                </node>
+                <node id="Objective">
+                    <attribute id="Description" value="" handle="ls::TranslatedStringRepository::s_HandleUnknown" type="28" />
+                    <attribute id="ObjectiveID" value="Done_3" type="22" />
+                    <attribute id="Priority" value="100" type="4" />
+                </node>
+            </children>
+        </node>
+    </region>
+</save>

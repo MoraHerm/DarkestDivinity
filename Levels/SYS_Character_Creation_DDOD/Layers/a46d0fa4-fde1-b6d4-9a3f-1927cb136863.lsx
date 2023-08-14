@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<save>
+    <header version="2" time="1500389629" />
+    <version major="3" minor="1" revision="2" build="19" />
+    <region id="MetaData">
+        <node id="root">
+            <attribute id="ID" value="a46d0fa4-fde1-b6d4-9a3f-1927cb136863" type="31" />
+            <attribute id="Name" value="Cam triggers" type="23" />
+        </node>
+    </region>
+</save>

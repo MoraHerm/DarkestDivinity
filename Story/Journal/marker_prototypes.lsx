@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<save>
+    <header version="2" />
+    <version major="3" minor="6" revision="6" build="0" />
+    <region id="Markers">
+        <node id="root">
+            <children>
+                <node id="Marker">
+                    <attribute id="DisplayText" value="Road sign" handle="ls::TranslatedStringRepository::s_HandleUnknown" type="28" />
+                    <attribute id="MarkerBroadcast" value="Character" type="22" />
+                    <attribute id="MarkerID" value="Hub_SignRoad" type="22" />
+                    <attribute id="MarkerIcon" value="LocationMarker" type="22" />
+                    <attribute id="MarkerLevel" value="HubLocation" type="22" />
+                    <attribute id="MarkerTargetObjectType" value="Item" type="22" />
+                    <attribute id="MarkerTargetObjectUUID" value="6a6c6638-d84e-4be0-af0b-b5c8cc329ab2" type="22" />
+                </node>
+                <node id="Marker">
+                    <attribute id="DisplayText" value="Road sign" handle="ls::TranslatedStringRepository::s_HandleUnknown" type="28" />
+                    <attribute id="MarkerBroadcast" value="Character" type="22" />
+                    <attribute id="MarkerID" value="Forest_1_SignRoad" type="22" />
+                    <attribute id="MarkerIcon" value="LocationMarker" type="22" />
+                    <attribute id="MarkerLevel" value="HubLocation" type="22" />
+                    <attribute id="MarkerTargetObjectType" value="Item" type="22" />
+                    <attribute id="MarkerTargetObjectUUID" value="f40e8228-5d3c-4fce-ba33-fc5f252ebc3f" type="22" />
+                </node>
+                <node id="Marker">
+                    <attribute id="DisplayText" value="Food merchant" handle="ls::TranslatedStringRepository::s_HandleUnknown" type="28" />
+                    <attribute id="MarkerBroadcast" value="Character" type="22" />
+                    <attribute id="MarkerID" value="Hub_FoodMerchant" type="22" />
+                    <attribute id="MarkerIcon" value="QuestMarker" type="22" />
+                    <attribute id="MarkerLevel" value="HubLocation" type="22" />
+                    <attribute id="MarkerTargetObjectType" value="Character" type="22" />
+                    <attribute id="MarkerTargetObjectUUID" value="b502ca8c-72c9-4ccd-b8ee-58bac5f64008" type="22" />
+                </node>
+                <node id="Marker">
+                    <attribute id="DisplayText" value="Equipment merchant" handle="ls::TranslatedStringRepository::s_HandleUnknown" type="28" />
+                    <attribute id="MarkerBroadcast" value="Character" type="22" />
+                    <attribute id="MarkerID" value="Hub_EquipmentMerchant" type="22" />
+                    <attribute id="MarkerIcon" value="QuestMarker" type="22" />
+                    <attribute id="MarkerLevel" value="HubLocation" type="22" />
+                    <attribute id="MarkerTargetObjectType" value="Character" type="22" />
+                    <attribute id="MarkerTargetObjectUUID" value="3fb0ab96-3e82-4796-a310-bb92b3a2efb2" type="22" />
+                </node>
+                <node id="Marker">
+                    <attribute id="DisplayText" value="Expidition leader" handle="ls::TranslatedStringRepository::s_HandleUnknown" type="28" />
+                    <attribute id="MarkerBroadcast" value="Character" type="22" />
+                    <attribute id="MarkerID" value="Hub_ExpiditionLeader" type="22" />
+                    <attribute id="MarkerIcon" value="QuestMarker" type="22" />
+                    <attribute id="MarkerLevel" value="HubLocation" type="22" />
+                    <attribute id="MarkerTargetObjectType" value="Character" type="22" />
+                    <attribute id="MarkerTargetObjectUUID" value="67cd4295-fb03-44ad-b09c-e7a547b57f23" type="22" />
+                </node>
+                <node id="Marker">
+                    <attribute id="DisplayText" value="Reward chest" handle="ls::TranslatedStringRepository::s_HandleUnknown" type="28" />
+                    <attribute id="MarkerBroadcast" value="Character" type="22" />
+                    <attribute id="MarkerID" value="Hub_RewardChest" type="22" />
+                    <attribute id="MarkerIcon" value="QuestMarker" type="22" />
+                    <attribute id="MarkerLevel" value="HubLocation" type="22" />
+                    <attribute id="MarkerTargetObjectType" value="Item" type="22" />
+                    <attribute id="MarkerTargetObjectUUID" value="824e87b5-e1f3-4239-9f7c-1af109d3cab3" type="22" />
+                </node>
+                <node id="Marker">
+                    <attribute id="DisplayText" value="Fighters camp" handle="ls::TranslatedStringRepository::s_HandleUnknown" type="28" />
+                    <attribute id="MarkerBroadcast" value="Character" type="22" />
+                    <attribute id="MarkerID" value="Hub_FightersCamp" type="22" />
+                    <attribute id="MarkerIcon" value="LocationMarker" type="22" />
+                    <attribute id="MarkerLevel" value="HubLocation" type="22" />
+                    <attribute id="MarkerTargetObjectType" value="Trigger" type="22" />
+                    <attribute id="MarkerTargetObjectUUID" value="fe09d0d3-1db0-45ae-a9f7-746a396d4e1c" type="22" />
+                </node>
+            </children>
+        </node>
+    </region>
+</save>

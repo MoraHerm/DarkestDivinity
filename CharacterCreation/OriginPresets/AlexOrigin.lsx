@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<save>
+    <header version="2" time="1387205254" />
+    <version major="1" minor="3" revision="0" build="0" />
+    <region id="CharacterCreationManager">
+        <node id="root">
+            <children>
+                <node id="OriginDesc">
+                	<attribute id="OriginDisplayName" value="Alex" handle="ls::TranslatedStringRepository::s_HandleUnknown" type="28" />
+                    <attribute id="OriginName" value="OriginAlex" type="22" />
+                	<attribute id="OriginDescription" value="Forest bandit" handle="ls::TranslatedStringRepository::s_HandleUnknown" type="28" />
+                	<attribute id="OriginLongDescription" value="" handle="ls::TranslatedStringRepository::s_HandleUnknown" type="28" />
+                    <attribute id="CharacterUUID" value="358e2f21-5148-4d6c-b5c6-b162a2726dd1" type="22" />
+                    <attribute id="UserCanAlterTags" value="0" type="19" />
+                    <attribute id="SkillSet" value="" type="22" />
+                	<children>
+                		<node id="SupportedGenders">
+                			<children>
+							    <node id="Gender">
+                                    <attribute id="Gender" value="Female" type="23" />
+                                </node>
+                			</children>
+                		</node>
+                		<node id="SupportedRaces">
+                			<children>
+                                <node id="SupportedRaces">
+                                    <attribute id="Object" value="Human" type="22" />
+                                </node>							
+                			</children>
+                		</node>
+                	</children>
+                </node>
+            </children>
+        </node>
+    </region>
+</save>

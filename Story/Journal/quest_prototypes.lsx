@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<save>
+    <header version="2" />
+    <version major="3" minor="6" revision="6" build="0" />
+    <region id="Quests">
+        <node id="root">
+            <children>
+                <node id="Quest">
+                    <attribute id="CategoryID" value="DDOD_Hub_FirstMeet" type="22" />
+                    <attribute id="MainQuest" value="0" type="19" />
+                    <attribute id="QuestBroadcastLevel" value="2" type="1" />
+                    <attribute id="QuestID" value="EquipmentMerchantMeet" type="22" />
+                    <attribute id="QuestTitle" value="Meet equipment merchant" handle="ls::TranslatedStringRepository::s_HandleUnknown" type="28" />
+                    <attribute id="Shareable" value="1" type="19" />
+                    <attribute id="SortingPriority" value="3" type="4" />
+                    <children>
+                        <node id="QuestState">
+                            <attribute id="Achievement" value="" type="22" />
+                            <attribute id="Act" value="0" type="4" />
+                            <attribute id="Description" value="You will need equipment for your journey. Gather information where you can get equipment." handle="ls::TranslatedStringRepository::s_HandleUnknown" type="28" />
+                            <attribute id="DevComment" value="" type="22" />
+                            <attribute id="Gain" value="0" type="4" />
+                            <attribute id="Mystery" value="" type="22" />
+                            <attribute id="MysteryAction" value="0" type="1" />
+                            <attribute id="MysteryDescription" value="" handle="ls::TranslatedStringRepository::s_HandleUnknown" type="28" />
+                            <attribute id="Objective" value="MeetEquipmentMerchant" type="22" />
+                            <attribute id="QuestRewardCount" value="0" type="4" />
+                            <attribute id="QuestRewardLevel" value="0" type="4" />
+                            <attribute id="ReputationGain" value="0" type="4" />
+                            <attribute id="StatTriggerGUID" value="" type="22" />
+                            <attribute id="Status" value="start" type="22" />
+                        </node>
+                        <node id="QuestState">
+                            <attribute id="Achievement" value="" type="22" />
+                            <attribute id="Act" value="0" type="4" />
+                            <attribute id="Description" value="Along the way, in addition to dangerous creatures, darkness will also confront you. Light a torch to light the way." handle="ls::TranslatedStringRepository::s_HandleUnknown" type="28" />
+                            <attribute id="DevComment" value="" type="22" />
+                            <attribute id="Gain" value="0" type="4" />
+                            <attribute id="Mystery" value="" type="22" />
+                            <attribute id="MysteryAction" value="0" type="1" />
+                            <attribute id="MysteryDescription" value="" handle="ls::TranslatedStringRepository::s_HandleUnknown" type="28" />
+                            <attribute id="Objective" value="LightTorch" type="22" />
+                            <attribute id="QuestRewardCount" value="0" type="4" />
+                            <attribute id="QuestRewardLevel" value="0" type="4" />
+                            <attribute id="ReputationGain" value="0" type="4" />
+                            <attribute id="StatTriggerGUID" value="" type="22" />
+                            <attribute id="Status" value="useTorch" type="22" />
+                        </node>
+                        <node id="QuestState">
+                            <attribute id="Achievement" value="" type="22" />
+                            <attribute id="Act" value="0" type="4" />
+                            <attribute id="Description" value="" handle="ls::TranslatedStringRepository::s_HandleUnknown" type="28" />
+                            <attribute id="DevComment" value="" type="22" />
+                            <attribute id="Gain" value="0" type="4" />
+                            <attribute id="Mystery" value="" type="22" />
+                            <attribute id="MysteryAction" value="0" type="1" />
+                            <attribute id="MysteryDescription" value="" handle="ls::TranslatedStringRepository::s_HandleUnknown" type="28" />
+                            <attribute id="Objective" value="Done_1" type="22" />
+                            <attribute id="QuestRewardCount" value="0" type="4" />
+                            <attribute id="QuestRewardLevel" value="0" type="4" />
+                            <attribute id="ReputationGain" value="0" type="4" />
+                            <attribute id="StatTriggerGUID" value="" type="22" />
+                            <attribute id="Status" value="end" type="22" />
+                        </node>
+                        <node id="QuestState">
+                            <attribute id="Achievement" value="" type="22" />
+                            <attribute id="Act" value="0" type="4" />
+                            <attribute id="Description" value="You lit up the surrounding area with the light of a torch." handle="ls::TranslatedStringRepository::s_HandleUnknown" type="28" />
+                            <attribute id="DevComment" value="" type="22" />
+                            <attribute id="Gain" value="0" type="4" />
+                            <attribute id="Mystery" value="" type="22" />
+                            <attribute id="MysteryAction" value="0" type="1" />
+                            <attribute id="MysteryDescription" value="" handle="ls::TranslatedStringRepository::s_HandleUnknown" type="28" />
+                            <attribute id="Objective" value="" type="22" />
+                            <attribute id="QuestRewardCount" value="0" type="4" />
+                            <attribute id="QuestRewardLevel" value="0" type="4" />
+                            <attribute id="ReputationGain" value="0" type="4" />
+                            <attribute id="StatTriggerGUID" value="" type="22" />
+                            <attribute id="Status" value="torchUsed" type="22" />
+                        </node>
+                    </children>
+                </node>
+                <node id="Quest">
+                    <attribute id="CategoryID" value="DDOD_Hub_FirstMeet" type="22" />
+                    <attribute id="MainQuest" value="0" type="19" />
+                    <attribute id="QuestBroadcastLevel" value="2" type="1" />
+                    <attribute id="QuestID" value="FoodMerchantMeet" type="22" />
+                    <attribute id="QuestTitle" value="Meet food merchant" handle="ls::TranslatedStringRepository::s_HandleUnknown" type="28" />
+                    <attribute id="Shareable" value="1" type="19" />
+                    <attribute id="SortingPriority" value="2" type="4" />
+                    <children>
+                        <node id="QuestState">
+                            <attribute id="Achievement" value="" type="22" />
+                            <attribute id="Act" value="0" type="4" />
+                            <attribute id="Description" value="Find food merchant to get food provision for your work." handle="ls::TranslatedStringRepository::s_HandleUnknown" type="28" />
+                            <attribute id="DevComment" value="" type="22" />
+                            <attribute id="Gain" value="0" type="4" />
+                            <attribute id="Mystery" value="" type="22" />
+                            <attribute id="MysteryAction" value="0" type="1" />
+                            <attribute id="MysteryDescription" value="" handle="ls::TranslatedStringRepository::s_HandleUnknown" type="28" />
+                            <attribute id="Objective" value="MeetFoodMerchant" type="22" />
+                            <attribute id="QuestRewardCount" value="0" type="4" />
+                            <attribute id="QuestRewardLevel" value="0" type="4" />
+                            <attribute id="ReputationGain" value="0" type="4" />
+                            <attribute id="StatTriggerGUID" value="" type="22" />
+                            <attribute id="Status" value="start" type="22" />
+                        </node>
+                        <node id="QuestState">
+                            <attribute id="Achievement" value="" type="22" />
+                            <attribute id="Act" value="0" type="4" />
+                            <attribute id="Description" value="Along the way you will might also face starvation. Eat to satisfy your hunger" handle="ls::TranslatedStringRepository::s_HandleUnknown" type="28" />
+                            <attribute id="DevComment" value="" type="22" />
+                            <attribute id="Gain" value="0" type="4" />
+                            <attribute id="Mystery" value="" type="22" />
+                            <attribute id="MysteryAction" value="0" type="1" />
+                            <attribute id="MysteryDescription" value="" handle="ls::TranslatedStringRepository::s_HandleUnknown" type="28" />
+                            <attribute id="Objective" value="EatFood" type="22" />
+                            <attribute id="QuestRewardCount" value="0" type="4" />
+                            <attribute id="QuestRewardLevel" value="0" type="4" />
+                            <attribute id="ReputationGain" value="0" type="4" />
+                            <attribute id="StatTriggerGUID" value="" type="22" />
+                            <attribute id="Status" value="useFood" type="22" />
+                        </node>
+                        <node id="QuestState">
+                            <attribute id="Achievement" value="" type="22" />
+                            <attribute id="Act" value="0" type="4" />
+                            <attribute id="Description" value="You have satisfied the hunger." handle="ls::TranslatedStringRepository::s_HandleUnknown" type="28" />
+                            <attribute id="DevComment" value="" type="22" />
+                            <attribute id="Gain" value="0" type="4" />
+                            <attribute id="Mystery" value="" type="22" />
+                            <attribute id="MysteryAction" value="0" type="1" />
+                            <attribute id="MysteryDescription" value="" handle="ls::TranslatedStringRepository::s_HandleUnknown" type="28" />
+                            <attribute id="Objective" value="" type="22" />
+                            <attribute id="QuestRewardCount" value="0" type="4" />
+                            <attribute id="QuestRewardLevel" value="0" type="4" />
+                            <attribute id="ReputationGain" value="0" type="4" />
+                            <attribute id="StatTriggerGUID" value="" type="22" />
+                            <attribute id="Status" value="foodUsed" type="22" />
+                        </node>
+                        <node id="QuestState">
+                            <attribute id="Achievement" value="" type="22" />
+                            <attribute id="Act" value="0" type="4" />
+                            <attribute id="Description" value="" handle="ls::TranslatedStringRepository::s_HandleUnknown" type="28" />
+                            <attribute id="DevComment" value="" type="22" />
+                            <attribute id="Gain" value="0" type="4" />
+                            <attribute id="Mystery" value="" type="22" />
+                            <attribute id="MysteryAction" value="0" type="1" />
+                            <attribute id="MysteryDescription" value="" handle="ls::TranslatedStringRepository::s_HandleUnknown" type="28" />
+                            <attribute id="Objective" value="Done_1" type="22" />
+                            <attribute id="QuestRewardCount" value="0" type="4" />
+                            <attribute id="QuestRewardLevel" value="0" type="4" />
+                            <attribute id="ReputationGain" value="0" type="4" />
+                            <attribute id="StatTriggerGUID" value="" type="22" />
+                            <attribute id="Status" value="end" type="22" />
+                        </node>
+                    </children>
+                </node>
+                <node id="Quest">
+                    <attribute id="CategoryID" value="DDOD_Hub_FirstMeet" type="22" />
+                    <attribute id="MainQuest" value="0" type="19" />
+                    <attribute id="QuestBroadcastLevel" value="2" type="1" />
+                    <attribute id="QuestID" value="ExpeditionLeaderMeet" type="22" />
+                    <attribute id="QuestTitle" value="Meet expidition leader" handle="ls::TranslatedStringRepository::s_HandleUnknown" type="28" />
+                    <attribute id="Shareable" value="1" type="19" />
+                    <attribute id="SortingPriority" value="1" type="4" />
+                    <children>
+                        <node id="QuestState">
+                            <attribute id="Achievement" value="" type="22" />
+                            <attribute id="Act" value="0" type="4" />
+                            <attribute id="Description" value="Talk with expiditon leader for briefing" handle="ls::TranslatedStringRepository::s_HandleUnknown" type="28" />
+                            <attribute id="DevComment" value="" type="22" />
+                            <attribute id="Gain" value="0" type="4" />
+                            <attribute id="Mystery" value="" type="22" />
+                            <attribute id="MysteryAction" value="0" type="1" />
+                            <attribute id="MysteryDescription" value="" handle="ls::TranslatedStringRepository::s_HandleUnknown" type="28" />
+                            <attribute id="Objective" value="MeetExpeditionLeader" type="22" />
+                            <attribute id="QuestRewardCount" value="0" type="4" />
+                            <attribute id="QuestRewardLevel" value="0" type="4" />
+                            <attribute id="ReputationGain" value="0" type="4" />
+                            <attribute id="StatTriggerGUID" value="" type="22" />
+                            <attribute id="Status" value="start" type="22" />
+                        </node>
+                        <node id="QuestState">
+                            <attribute id="Achievement" value="" type="22" />
+                            <attribute id="Act" value="0" type="4" />
+                            <attribute id="Description" value="" handle="ls::TranslatedStringRepository::s_HandleUnknown" type="28" />
+                            <attribute id="DevComment" value="" type="22" />
+                            <attribute id="Gain" value="0" type="4" />
+                            <attribute id="Mystery" value="" type="22" />
+                            <attribute id="MysteryAction" value="0" type="1" />
+                            <attribute id="MysteryDescription" value="" handle="ls::TranslatedStringRepository::s_HandleUnknown" type="28" />
+                            <attribute id="Objective" value="Done_3" type="22" />
+                            <attribute id="QuestRewardCount" value="0" type="4" />
+                            <attribute id="QuestRewardLevel" value="0" type="4" />
+                            <attribute id="ReputationGain" value="0" type="4" />
+                            <attribute id="StatTriggerGUID" value="" type="22" />
+                            <attribute id="Status" value="end" type="22" />
+                        </node>
+                        <node id="QuestState">
+                            <attribute id="Achievement" value="" type="22" />
+                            <attribute id="Act" value="0" type="4" />
+                            <attribute id="Description" value="You get reward for each killed creature in journey. Reward is being stored in chest." handle="ls::TranslatedStringRepository::s_HandleUnknown" type="28" />
+                            <attribute id="DevComment" value="" type="22" />
+                            <attribute id="Gain" value="0" type="4" />
+                            <attribute id="Mystery" value="" type="22" />
+                            <attribute id="MysteryAction" value="0" type="1" />
+                            <attribute id="MysteryDescription" value="" handle="ls::TranslatedStringRepository::s_HandleUnknown" type="28" />
+                            <attribute id="Objective" value="GetRewardChest" type="22" />
+                            <attribute id="QuestRewardCount" value="0" type="4" />
+                            <attribute id="QuestRewardLevel" value="0" type="4" />
+                            <attribute id="ReputationGain" value="0" type="4" />
+                            <attribute id="StatTriggerGUID" value="" type="22" />
+                            <attribute id="Status" value="getRewardChest" type="22" />
+                        </node>
+                        <node id="QuestState">
+                            <attribute id="Achievement" value="" type="22" />
+                            <attribute id="Act" value="0" type="4" />
+                            <attribute id="Description" value="It is highly unlikely that you will manage the journey on your own. Check out the fighter camp to recruit companions." handle="ls::TranslatedStringRepository::s_HandleUnknown" type="28" />
+                            <attribute id="DevComment" value="" type="22" />
+                            <attribute id="Gain" value="0" type="4" />
+                            <attribute id="Mystery" value="" type="22" />
+                            <attribute id="MysteryAction" value="0" type="1" />
+                            <attribute id="MysteryDescription" value="" handle="ls::TranslatedStringRepository::s_HandleUnknown" type="28" />
+                            <attribute id="Objective" value="FightersCamp" type="22" />
+                            <attribute id="QuestRewardCount" value="0" type="4" />
+                            <attribute id="QuestRewardLevel" value="0" type="4" />
+                            <attribute id="ReputationGain" value="0" type="4" />
+                            <attribute id="StatTriggerGUID" value="" type="22" />
+                            <attribute id="Status" value="hireCompanion" type="22" />
+                        </node>
+                        <node id="QuestState">
+                            <attribute id="Achievement" value="" type="22" />
+                            <attribute id="Act" value="0" type="4" />
+                            <attribute id="Description" value="" handle="ls::TranslatedStringRepository::s_HandleUnknown" type="28" />
+                            <attribute id="DevComment" value="" type="22" />
+                            <attribute id="Gain" value="0" type="4" />
+                            <attribute id="Mystery" value="" type="22" />
+                            <attribute id="MysteryAction" value="0" type="1" />
+                            <attribute id="MysteryDescription" value="" handle="ls::TranslatedStringRepository::s_HandleUnknown" type="28" />
+                            <attribute id="Objective" value="" type="22" />
+                            <attribute id="QuestRewardCount" value="0" type="4" />
+                            <attribute id="QuestRewardLevel" value="0" type="4" />
+                            <attribute id="ReputationGain" value="0" type="4" />
+                            <attribute id="StatTriggerGUID" value="" type="22" />
+                            <attribute id="Status" value="companionHired" type="22" />
+                        </node>
+                    </children>
+                </node>
+            </children>
+        </node>
+    </region>
+</save>

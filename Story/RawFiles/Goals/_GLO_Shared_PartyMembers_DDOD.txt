@@ -1,0 +1,67 @@
+Version 1
+SubGoalCombiner SGC_AND
+INITSECTION
+//update this variable to change max party size
+NOT DB_Origins_MaxPartySize(4);
+DB_Origins_MaxPartySize(3);
+KBSECTION
+PROC
+PROC_GLO_PartyMembers_CheckAdd_DDOD((CHARACTERGUID)_Origin,(CHARACTERGUID)_Player)
+AND
+GlobalGetFlag("GEN_MaxPlayerCountReached",0)
+THEN
+PROC_GLO_PartyMembers_Add_DDOD(_Origin,_Player);
+
+//Same as defauld _add procedure, but does not levels up 
+PROC
+PROC_GLO_PartyMembers_Add_DDOD((CHARACTERGUID)_Origin,(CHARACTERGUID)_Player)
+AND
+QRY_GLO_PartyMembers_GetInPartyDialogReset(_Origin)
+AND
+QRY_GLO_PartyMembers_GetInPartyDialog(_Origin)
+AND
+DB_GLO_PartyMembers_InPartyDialog(_Origin,_NewDialog)
+AND
+DB_GLO_PartyMembers_DefaultFaction(_Origin,_PlayerFaction)
+THEN
+PROC_CharacterRecruitCharacter_preserveLevel(_Origin,_Player);
+ProcCharacterDisableAllCrimes(_Origin);
+ProcAssignCharacterToPlayer(_Origin,_Player);
+ProcRegisterPlayerTriggers(_Origin);
+PROC_GLO_PartyMembers_SetInpartyDialog(_Origin,_NewDialog);
+SetFaction(_Origin,_PlayerFaction);
+DB_IsPlayer(_Origin);
+NOT DB_GLO_PartyMembers_DefaultFaction(_Origin,_PlayerFaction);
+CharacterAttachToGroup(_Origin,_Player);
+Proc_CheckPartyFull();
+Proc_CheckFirstTimeRecruited(_Origin);
+//PROC_GLO_PartyMembers_RecruiteeAvatarBond_IfDifferent(_Origin,_Player);
+Proc_BondedAvatarTutorial(_Player);
+CharacterSetCorpseLootable(_Origin, 0);
+PROC_GLO_PartyMembers_AddHook(_Origin,_Player);
+
+PROC
+PROC_GLO_PartyMembers_MakeNPC_DDOD((CHARACTERGUID)_Member)
+AND
+GetFaction(_Member,_PlayerFaction)
+AND
+DB_GLO_PartyMembers_OriginalAlignment((CHARACTERGUID)_Member,(STRING)_NpcFaction)
+THEN
+NOT DB_IsPlayer(_Member);
+CharacterMakeNPC(_Member);
+ProcRemovePolymorphs(_Member);
+ProcCharacterEnableAllCrimes(_Member);
+ProcUnRegisterPlayerTriggers(_Member);
+ProcRemoveGenericTimer(_Member);
+DB_GLO_PartyMembers_DefaultFaction(_Member,_PlayerFaction);
+SetFaction(_Member,_NpcFaction);
+//DB_NoLowAttitudeDialog(_Member);
+//ProcRemoveAllDialogEntriesForSpeaker(_Member);
+//SetHasDialog(_Member,0);
+Proc_CheckPartyFull();
+RemoveStatus(_Member,"FUGITIVE");
+PROC_GLO_PartyMembers_MakeNPCHook((CHARACTERGUID)_Member);
+EXITSECTION
+
+ENDEXITSECTION
+ParentTargetEdge "__Shared_Campaign"

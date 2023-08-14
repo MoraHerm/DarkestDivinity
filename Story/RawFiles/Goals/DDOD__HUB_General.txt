@@ -1,0 +1,117 @@
+Version 1
+SubGoalCombiner SGC_AND
+INITSECTION
+//DB_WaypointInfo(ITEMGUID_TOOL_SignRoad_HubEntarance_2201823b-bade-4a90-8f1b-90d6a28dfc48,TRIGGERGUID_S_DDOD_Hub_PlayerReturnTrigger_f8b8d2fa-7183-4a2d-b1ec-9370c7f3001a,"Hubville: Enterance");
+//PROC_UnlockWaypoint("Hubville: Enterance",CHARACTERGUID_Summons_GiantIncarnate_debug_166dca73-53b7-43e7-a28f-4a5ada6b29b9);
+//RegisterWaypoint("Hubville: Enterance",ITEMGUID_TOOL_SignRoad_HubEntarance_2201823b-bade-4a90-8f1b-90d6a28dfc48);
+
+DB_WaypointInfo(ITEMGUID_S_DemoHub_Waypoint_FireplaceStatue_d7e814eb-cd7a-4528-adee-cb35fd2544a6,TRIGGERGUID_S_DDOD_DemoHub_PlayerReturnTrigger_67eece7e-8401-4e12-af7f-8ddbbc2681a1,"Middleroad camp");
+
+RegisterWaypoint("Middleroad camp",TRIGGERGUID_S_DDOD_DemoHub_PlayerReturnTrigger_67eece7e-8401-4e12-af7f-8ddbbc2681a1);
+
+
+DB_dungeonGenerated(0);
+
+DB_HubTraders(CHARACTERGUID_GameMaster_Trader_Skill_NOTUSED_001_4e53426c-869a-449e-8494-94f7fe4c145b);
+DB_HubTraders(CHARACTERGUID_GameMaster_Trader_Magic_NOTUSED_001_df53395b-bd55-46b5-a319-0b5876cf70d9);
+DB_HubTraders(CHARACTERGUID_DDOD_HUB_Trader_Food_000_b502ca8c-72c9-4ccd-b8ee-58bac5f64008);
+DB_HubTraders(CHARACTERGUID_DDOD_HUB_Trader_Equipment_000_3fb0ab96-3e82-4796-a310-bb92b3a2efb2);
+DB_HubTraders(CHARACTERGUID_GameMaster_Trader_Warrior_NOTUSED_001_c334fdb3-ff95-4f54-905e-71d1480ad932);
+DB_HubTraders(CHARACTERGUID_DDOD_HUB_Trader_Alchemist_000_82392f6b-4b81-46a4-b654-7cca33c9522b);
+KBSECTION
+//REGION //dungeon generation start
+IF
+ReadyCheckPassed("DDOD_Dungeon_SignRoad_StartTransition")
+AND
+DB_dungeonGenerated(0)
+THEN
+NOT DB_dungeonGenerated(0);
+DB_dungeonGenerated(1);
+PROC_generateSelectedDungeon();
+
+IF
+ReadyCheckFailed("DDOD_Dungeon_SignRoad_StartTransition")
+AND
+DB_dungeonGenerated(0)
+THEN
+GlobalClearFlag("DDOD_HUB_SignRoad_StartDungeon");
+//END_REGION
+
+//REGION //regenerate Hub Treasure
+PROC
+PROC_generateTradersLoot()
+AND
+DB_playersMaxLevel(_char,_)
+AND
+DB_HubTraders(_trader)
+THEN
+GenerateItems((CHARACTERGUID)_char,(CHARACTERGUID)_trader);
+
+IF
+StoryEvent(_,"DDOD_softExitDungeon")
+THEN
+GenerateTreasure(ITEMGUID_CONT_DemoHub_ExpeditionChest_824e87b5-e1f3-4239-9f7c-1af109d3cab3,"DDOD_ExpiditionChest",-1,CHARACTERGUID_NULL_00000000-0000-0000-0000-000000000000);
+PROC_generateCompleteDungeonTreasure();
+PROC_resetWeigthScore();
+PROC_generateTradersLoot();
+
+IF
+StoryEvent(_,"DDOD_hardExitDungeon")
+THEN
+GenerateTreasure(ITEMGUID_CONT_DemoHub_ExpeditionChest_824e87b5-e1f3-4239-9f7c-1af109d3cab3,"DDOD_ExpiditionChest",-1,CHARACTERGUID_NULL_00000000-0000-0000-0000-000000000000);
+PROC_generateCompleteDungeonTreasure();
+PROC_resetWeigthScore();
+PROC_generateTradersLoot();
+
+PROC //4 1 = RewardTiny, 8 2 = RewardSmall, 16 4 = RewardMedium, 32 8 = RewardBig
+PROC_generateCompleteDungeonTreasure()
+AND
+DB_currentWeightScore(_weightScore)
+AND
+IntegerDivide(_weightScore,2,_amoutTreasureLeftBig)
+AND
+QRY_generateReward(_amoutTreasureLeftBig,8,"RewardBig")
+AND
+IntegerModulo(_amoutTreasureLeftBig,8,_amoutTreasureLeftMedium)
+AND
+QRY_generateReward(_amoutTreasureLeftMedium,4,"RewardMedium")
+AND
+IntegerModulo(_amoutTreasureLeftMedium,4,_amoutTreasureLeftSmall)
+AND
+QRY_generateReward(_amoutTreasureLeftSmall,2,"RewardSmall")
+AND
+IntegerModulo(_amoutTreasureLeftMedium,2,_amoutTreasureLeftSmall)
+AND
+QRY_generateReward(_amoutTreasureLeftSmall,1,"RewardTiny")
+THEN
+DB_NOOP(0);
+
+QRY
+QRY_generateReward((INTEGER)_amoutTreasure, (INTEGER)_weightPerReward,(STRING)_treasureReward)
+AND
+IntegerSubtract(_amoutTreasure,_weightPerReward,_amoutTreasureLeft)
+AND
+_amoutTreasureLeft >= 0
+THEN
+GenerateTreasure(ITEMGUID_CONT_DemoHub_ExpeditionChest_824e87b5-e1f3-4239-9f7c-1af109d3cab3,_treasureReward,-1,CHARACTERGUID_NULL_00000000-0000-0000-0000-000000000000);
+PROC_generateReward(_amoutTreasureLeft,_weightPerReward,_treasureReward);
+
+QRY
+QRY_generateReward((INTEGER)_amoutTreasure, (INTEGER)_weightPerReward,(STRING)_treasureReward)
+THEN
+DB_NOOP(0);
+
+PROC
+PROC_generateReward((INTEGER)_amoutTreasure, (INTEGER)_weightPerReward,(STRING)_treasureReward)
+AND
+QRY_generateReward(_amoutTreasure,_weightPerReward,_treasureReward)
+THEN
+DB_NOOP(0);
+
+
+
+//END_REGION
+EXITSECTION
+
+ENDEXITSECTION
+ParentTargetEdge "__Start"

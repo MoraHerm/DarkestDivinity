@@ -1,0 +1,205 @@
+Version 1
+SubGoalCombiner SGC_AND
+INITSECTION
+DB_counter(0);
+
+//REGION //equipment slots
+DB_equipmentItemSlots("Helmet");
+DB_equipmentItemSlots("Breast");
+DB_equipmentItemSlots("Leggings");
+DB_equipmentItemSlots("Weapon");
+DB_equipmentItemSlots("Shield");
+DB_equipmentItemSlots("Ring");
+DB_equipmentItemSlots("Ring2");
+DB_equipmentItemSlots("Belt");
+DB_equipmentItemSlots("Boots");
+DB_equipmentItemSlots("Gloves");
+DB_equipmentItemSlots("Amulet");
+DB_equipmentItemSlots("Wings");
+DB_equipmentItemSlots("Horns");
+DB_equipmentItemSlots("Overhead");
+//END_REGION
+
+//REGION //light atmosphere
+DB_lightAtmosphere(0,"99b6eddb-609b-448a-877d-8f88e8e8a30d"); //ATM_PBR_Default_Cavern_G_
+DB_lightAtmosphere(1,"420afaa0-d6e2-4442-b464-aa48d3099424"); //ATM_PBR_Default_Cavern_I_
+DB_lightAtmosphere(2,"7ddee402-101a-4e3a-b79b-f3e5e0bce824"); //ATM_PBR_Default_Cavern_C_
+DB_lightAtmosphere(3,"b54e4ff0-23e8-45b4-95cd-c35c760db796"); //ATM_PBR_Default_Cavern_B_
+
+//END_REGION
+
+//REGION // DB_levelsExp(_level,_xpAmout) exp for levels
+DB_levelsExp(1,0);
+DB_levelsExp(2,2000);
+DB_levelsExp(3,8000);
+DB_levelsExp(4,20000);
+DB_levelsExp(5,40000);
+DB_levelsExp(6,70000);
+DB_levelsExp(7,112000);
+DB_levelsExp(8,168000);
+DB_levelsExp(9,240000);
+DB_levelsExp(10,330000);
+DB_levelsExp(11,440000);
+DB_levelsExp(12,572000);
+DB_levelsExp(13,728000);
+DB_levelsExp(14,910000);
+DB_levelsExp(15,1120000);
+DB_levelsExp(16,1360000);
+DB_levelsExp(17,1632000);
+DB_levelsExp(18,1938000);
+DB_levelsExp(19,2280000);
+DB_levelsExp(20,2660000);
+DB_levelsExp(21,3080000);
+DB_levelsExp(22,3542000);
+DB_levelsExp(23,4048000);
+DB_levelsExp(24,4600000);
+DB_levelsExp(25,5200000);
+DB_levelsExp(26,5850000);
+DB_levelsExp(27,6552000);
+DB_levelsExp(28,7308000);
+DB_levelsExp(29,8120000);
+DB_levelsExp(30,8990000);
+//END_REGION
+KBSECTION
+//REGION //Counter
+QRY
+QRY_counter()
+AND
+DB_counter(_i)
+AND
+IntegerSum(_i,1,_newI)
+THEN
+NOT DB_counter(_i);
+DB_counter(_newI);
+
+
+QRY
+QRY_resetCounterIFVChanged((INTEGER)_currentValue)
+AND
+DB_counter(_counter)
+AND
+DB_prevValue(_prevValue)
+AND
+_currentValue != _prevValue
+THEN
+NOT DB_counter(_counter);
+DB_counter(0);
+NOT DB_prevValue(_prevValue);
+DB_prevValue(_currentValue);
+
+QRY
+QRY_resetCounterIFVChanged((INTEGER)_currentValue)
+THEN
+DB_NOOP(1);
+
+QRY
+QRY_resetCounterIFVMoreThan((INTEGER)_maxValue)
+AND
+DB_counter(_counter)
+AND
+_counter > _maxValue
+THEN
+NOT DB_counter(_counter);
+DB_counter(0);
+
+QRY
+QRY_resetCounterIFVMoreThan((INTEGER)_maxValue)
+THEN
+NOT DB_NOOP();
+
+QRY
+QRY_resetCounter()
+AND
+DB_counter(_val)
+THEN
+NOT DB_counter(_val);
+DB_counter(0);
+
+//END_REGION
+
+//REGION //level up char and equipment
+PROC
+PROC_CharacterRecruitCharacter_preserveLevel((CHARACTERGUID)_charRecruit,(CHARACTERGUID)_charOwner)
+AND
+CharacterIsPlayer(_charRecruit,0)
+AND
+CharacterGetLevel(_charRecruit,_prevLevel)
+AND
+NRD_CharacterGetStatInt(_charRecruit,"Experience",_exp)
+THEN
+CharacterRecruitCharacter(_charRecruit,_charOwner);
+PROC_CharacterLevelDownTo(_charRecruit,_prevLevel);
+NRD_CharacterSetStatInt(_charRecruit,"Experience",_exp);
+
+PROC
+PROC_CharacterLevelDownTo((CHARACTERGUID)_char,(INTEGER)_reqLevel)
+AND
+CharacterGetLevel(_char,_curLevel)
+AND
+IntegerSubtract(_curLevel,1,_ActPart)
+AND
+_reqLevel<_curLevel
+THEN
+CharacterAddExplorationExperience(_char,0,_ActPart,-100);
+PROC_CharacterLevelDownTo(_char,_reqLevel);
+
+PROC
+PROC_charLevelUpTo((CHARACTERGUID)_char,(INTEGER)_maxLevel,(INTEGER)_varLevel)
+AND
+IntegerSum(_varLevel,1,_varLevelCor)
+AND
+Random(_varLevelCor,_deltaLevel)
+AND
+IntegerSubtract(_maxLevel,_varLevel,_corLevel)
+AND
+IntegerSum(_corLevel,_deltaLevel,_requiredLevel)
+AND
+IntegerMax(_requiredLevel,0,_corRequiredLevel)
+THEN
+CharacterLevelUpTo(_char,_corRequiredLevel);
+
+PROC
+PROC_equipLevelUpTo((CHARACTERGUID)_char,(INTEGER)_maxLevel,(INTEGER)_varLevel)
+AND
+DB_equipmentItemSlots(_slotName)
+AND
+CharacterGetEquippedItem(_char,_slotName,_item)
+AND
+IntegerSum(_varLevel,1,_varLevelCor)
+AND
+Random(_varLevelCor,_deltaLevel)
+AND
+IntegerSubtract(_maxLevel,_varLevel,_corLevel)
+AND
+IntegerSum(_corLevel,_deltaLevel,_requiredLevel)
+AND
+IntegerMax(_requiredLevel,0,_corRequiredLevel)
+THEN
+ItemLevelUpTo((ITEMGUID)_item,_corRequiredLevel);
+
+PROC
+PROC_updatePartyEquipmentLevel()
+AND
+DB_PlayersCharacters_Active(_char)
+AND
+CharacterGetLevel(_char,_level)
+THEN
+PROC_equipLevelUpTo(_char,_level,0);
+//END_REGION
+
+//REGION //
+PROC
+PROC_setLightAtmosphere((INTEGER)_light)
+AND
+DB_roomLayout_BoundingBox(_,_,_,_atmosphereTriggerBox)
+AND
+DB_lightAtmosphere(_light,_atmosphere)
+THEN
+TriggerSetAtmosphere((TRIGGERGUID)_atmosphereTriggerBox,_atmosphere);
+
+
+//END_REGION
+EXITSECTION
+
+ENDEXITSECTION
+ParentTargetEdge "__Start"

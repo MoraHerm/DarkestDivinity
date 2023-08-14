@@ -1,0 +1,29 @@
+Version 1
+SubGoalCombiner SGC_AND
+INITSECTION
+//DB_countedPlayers(0);
+
+
+KBSECTION
+IF
+CharacterUsedItem(_char,ITEMGUID_DEBUG_Lever_TestFeature_002_32ed6aa9-98ae-487b-a103-fee9e9999754)
+THEN
+PROC_CharacterRecruitCharacter_preserveLevel(CHARACTERGUID_Adventurer_Generic_000_1caf2b32-8a98-479a-992c-b6006b9040cc,_char);
+
+IF
+CharacterUsedItem(_char,ITEMGUID_DEBUG_Lever_TestFeature_a243e2bd-8621-4ecb-b8ad-b8538e33ade8)
+THEN
+PROC_CharacterRecruitCharacter_preserveLevel(CHARACTERGUID_Adventurer_Andry_001_eed84ba8-a59a-4d2b-b84f-ae4671847757,_char);
+
+IF
+CharacterUsedItem(_char,ITEMGUID_DEBUG_Lever_TestFeature_000_b738d047-7fe0-4fb8-85ae-544bc07ce085)
+THEN
+PROC_CharacterRecruitCharacter_preserveLevel(CHARACTERGUID_Adventurer_Duck_000_79daa65c-9506-45b5-b03a-fc70338af6f6,_char);
+
+IF
+CharacterUsedItem(_,ITEMGUID_Test_PUZ_Lever_Floor_A_000_68f74891-d842-47ac-bdff-212efa4d49c4)
+THEN
+CharacterSetAnimationOverride(CHARACTERGUID_Adventurer_Andry_000_ca62b0c5-7e3b-423b-b8f4-17914a5ca56f,"Training_2HS_01_Loop");
+EXITSECTION
+
+ENDEXITSECTION

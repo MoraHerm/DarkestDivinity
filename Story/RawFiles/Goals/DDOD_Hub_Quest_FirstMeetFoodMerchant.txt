@@ -1,0 +1,39 @@
+Version 1
+SubGoalCombiner SGC_AND
+INITSECTION
+DB_QuestDef_State("FoodMerchantMeet","start",1);
+DB_QuestDef_State("FoodMerchantMeet","useFood");
+
+PROC_initFoodMerchantMeetQuest();
+KBSECTION
+PROC
+PROC_initFoodMerchantMeetQuest()
+AND
+DB_IsPlayer(_char)
+THEN
+ObjectSetFlag(_char,"QuestUpdate_FoodMerchantMeet_start",-1);
+
+IF
+ObjectFlagSet("QuestUpdate_FoodMerchantMeet_useFood",_,_)
+THEN
+DB_QuestDef_State("FoodMerchantMeet","foodUsed",1);
+DB_QuestDef_State("FoodMerchantMeet","end",-1);
+
+IF
+CharacterUsedItem(_char,_item)
+AND
+DB_IsPlayer(_char)
+AND
+IsTagged(_item,"FOOD",1)
+AND
+IsTagged(_item,"POISONED",0)
+AND
+DB_QuestDef_State("FoodMerchantMeet","foodUsed")
+THEN
+DB_QuestDef_State("FoodMerchantMeet","useFood");
+ObjectSetFlag(_char,"QuestUpdate_FoodMerchantMeet_foodUsed",-1);
+ObjectSetFlag(_char,"QuestUpdate_FoodMerchantMeet_end",-1);
+EXITSECTION
+
+ENDEXITSECTION
+ParentTargetEdge "DDOD_Hub_IntroductionQuests"

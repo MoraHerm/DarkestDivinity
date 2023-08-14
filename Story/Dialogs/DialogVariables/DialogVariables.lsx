@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<save>
+    <header version="2" />
+    <version major="3" minor="6" revision="6" build="0" />
+    <region id="DialogVariables">
+        <node id="root">
+            <children>
+                <node id="DialogVariable">
+                    <attribute id="DefaultValue" value="0" type="23" />
+                    <attribute id="Description" value="" type="23" />
+                    <attribute id="UUID" value="d5926ffe-fda0-4c5b-8289-19aa22cf1384" type="31" />
+                    <attribute id="name" value="DDOD_Adventurer_RespecPrice_days" type="22" />
+                    <attribute id="type" value="Int" type="23" />
+                </node>
+                <node id="DialogVariable">
+                    <attribute id="DefaultValue" value="0" type="23" />
+                    <attribute id="Description" value="" type="23" />
+                    <attribute id="UUID" value="1ebde1ca-0d48-47ef-bb92-d90fb530a2c6" type="31" />
+                    <attribute id="name" value="DDOD_Adventurer_RespecPrice_gold" type="22" />
+                    <attribute id="type" value="Int" type="23" />
+                </node>
+                <node id="DialogVariable">
+                    <attribute id="DefaultValue" value="" type="23" />
+                    <attribute id="Description" value="" type="23" />
+                    <attribute id="UUID" value="318f05a4-e390-4ba8-bb76-7b6401b33821" type="31" />
+                    <attribute id="name" value="DDOD_Dungeon_Adventurer_HirePrice" type="22" />
+                    <attribute id="type" value="Int" type="23" />
+                </node>
+                <node id="DialogVariable">
+                    <attribute id="DefaultValue" value="-1" type="23" />
+                    <attribute id="Description" value="" type="23" />
+                    <attribute id="UUID" value="fcf11d15-6829-42b8-9d0f-ecedc78b78c4" type="31" />
+                    <attribute id="name" value="DDOD_Dungeon_RoomIdx_Current" type="22" />
+                    <attribute id="type" value="Int" type="23" />
+                </node>
+                <node id="DialogVariable">
+                    <attribute id="DefaultValue" value="-1" type="23" />
+                    <attribute id="Description" value="" type="23" />
+                    <attribute id="UUID" value="fa3e0a43-38a4-440c-8958-af37ffd97570" type="31" />
+                    <attribute id="name" value="DDOD_Dungeon_RoomIdx_Path0" type="22" />
+                    <attribute id="type" value="Int" type="23" />
+                </node>
+                <node id="DialogVariable">
+                    <attribute id="DefaultValue" value="-1" type="23" />
+                    <attribute id="Description" value="" type="23" />
+                    <attribute id="UUID" value="e51b53e5-a16c-4faf-b214-5cf689c80cdc" type="31" />
+                    <attribute id="name" value="DDOD_Dungeon_RoomIdx_Path1" type="22" />
+                    <attribute id="type" value="Int" type="23" />
+                </node>
+                <node id="DialogVariable">
+                    <attribute id="DefaultValue" value="-1" type="23" />
+                    <attribute id="Description" value="" type="23" />
+                    <attribute id="UUID" value="1375b6c8-8f03-47b0-931d-f24ec2881038" type="31" />
+                    <attribute id="name" value="DDOD_Dungeon_RoomIdx_Path2" type="22" />
+                    <attribute id="type" value="Int" type="23" />
+                </node>
+                <node id="DialogVariable">
+                    <attribute id="DefaultValue" value="-1" type="23" />
+                    <attribute id="Description" value="" type="23" />
+                    <attribute id="UUID" value="ca81e96d-14fb-4ed5-a5ae-c71163ddda55" type="31" />
+                    <attribute id="name" value="DDOD_Dungeon_RoomIdx_Path3" type="22" />
+                    <attribute id="type" value="Int" type="23" />
+                </node>
+                <node id="DialogVariable">
+                    <attribute id="DefaultValue" value="" type="23" />
+                    <attribute id="Description" value="" type="23" />
+                    <attribute id="UUID" value="031fcd46-91e9-49bd-8ae4-e2456e229dd1" type="31" />
+                    <attribute id="name" value="DDOD_Dungeon_RoomStatus_Path0" type="22" />
+                    <attribute id="type" value="String" type="23" />
+                </node>
+                <node id="DialogVariable">
+                    <attribute id="DefaultValue" value="" type="23" />
+                    <attribute id="Description" value="" type="23" />
+                    <attribute id="UUID" value="b14ca12a-a9a1-481f-964e-7896846d6d93" type="31" />
+                    <attribute id="name" value="DDOD_Dungeon_RoomStatus_Path1" type="22" />
+                    <attribute id="type" value="String" type="23" />
+                </node>
+                <node id="DialogVariable">
+                    <attribute id="DefaultValue" value="" type="23" />
+                    <attribute id="Description" value="" type="23" />
+                    <attribute id="UUID" value="a605725b-a419-4934-95c4-c2489a507473" type="31" />
+                    <attribute id="name" value="DDOD_Dungeon_RoomStatus_Path2" type="22" />
+                    <attribute id="type" value="String" type="23" />
+                </node>
+                <node id="DialogVariable">
+                    <attribute id="DefaultValue" value="" type="23" />
+                    <attribute id="Description" value="" type="23" />
+                    <attribute id="UUID" value="43853a82-94fd-4ea9-9595-2bebc0fcf342" type="31" />
+                    <attribute id="name" value="DDOD_Dungeon_RoomStatus_Path3" type="22" />
+                    <attribute id="type" value="String" type="23" />
+                </node>
+                <node id="DialogVariable">
+                    <attribute id="DefaultValue" value="" type="23" />
+                    <attribute id="Description" value="" type="23" />
+                    <attribute id="UUID" value="9e912b5c-cb62-4069-a8cc-662b0f654889" type="31" />
+                    <attribute id="name" value="DDOD_Dungeon_RoomsAmout_Leave" type="22" />
+                    <attribute id="type" value="Int" type="23" />
+                </node>
+                <node id="DialogVariable">
+                    <attribute id="DefaultValue" value="" type="23" />
+                    <attribute id="Description" value="" type="23" />
+                    <attribute id="UUID" value="6cb92ba9-d5b5-4d9c-be4d-2a6205387ee1" type="31" />
+                    <attribute id="name" value="DDOD_Dungeon_TravelCost_Leave_Food" type="22" />
+                    <attribute id="type" value="Int" type="23" />
+                </node>
+                <node id="DialogVariable">
+                    <attribute id="DefaultValue" value="" type="23" />
+                    <attribute id="Description" value="" type="23" />
+                    <attribute id="UUID" value="ab0d57b6-2c94-4d7e-b3a9-959413eee6a1" type="31" />
+                    <attribute id="name" value="DDOD_Dungeon_TravelCost_Leave_Light" type="22" />
+                    <attribute id="type" value="Int" type="23" />
+                </node>
+                <node id="DialogVariable">
+                    <attribute id="DefaultValue" value="0" type="23" />
+                    <attribute id="Description" value="" type="23" />
+                    <attribute id="UUID" value="edac8f29-2b26-4e34-8567-c0313c928e25" type="31" />
+                    <attribute id="name" value="DDOD_Dungeon_TravelCost_Path0_Food" type="22" />
+                    <attribute id="type" value="Int" type="23" />
+                </node>
+                <node id="DialogVariable">
+                    <attribute id="DefaultValue" value="0" type="23" />
+                    <attribute id="Description" value="" type="23" />
+                    <attribute id="UUID" value="55e5ef68-ddbd-447c-b61d-d905e3a7e5ff" type="31" />
+                    <attribute id="name" value="DDOD_Dungeon_TravelCost_Path0_Light" type="22" />
+                    <attribute id="type" value="Int" type="23" />
+                </node>
+                <node id="DialogVariable">
+                    <attribute id="DefaultValue" value="0" type="23" />
+                    <attribute id="Description" value="" type="23" />
+                    <attribute id="UUID" value="8294558c-8a37-4031-a88e-7dffe07be15b" type="31" />
+                    <attribute id="name" value="DDOD_Dungeon_TravelCost_Path1_Food" type="22" />
+                    <attribute id="type" value="Int" type="23" />
+                </node>
+                <node id="DialogVariable">
+                    <attribute id="DefaultValue" value="0" type="23" />
+                    <attribute id="Description" value="" type="23" />
+                    <attribute id="UUID" value="c2df3cbb-a226-4256-9be3-7d2823eba351" type="31" />
+                    <attribute id="name" value="DDOD_Dungeon_TravelCost_Path1_Light" type="22" />
+                    <attribute id="type" value="Int" type="23" />
+                </node>
+                <node id="DialogVariable">
+                    <attribute id="DefaultValue" value="0" type="23" />
+                    <attribute id="Description" value="" type="23" />
+                    <attribute id="UUID" value="4d62c7f7-d9ee-4a9d-b116-2f2bb1295c17" type="31" />
+                    <attribute id="name" value="DDOD_Dungeon_TravelCost_Path2_Food" type="22" />
+                    <attribute id="type" value="Int" type="23" />
+                </node>
+                <node id="DialogVariable">
+                    <attribute id="DefaultValue" value="0" type="23" />
+                    <attribute id="Description" value="" type="23" />
+                    <attribute id="UUID" value="41346e94-591c-4d1f-adb2-51127de0f95c" type="31" />
+                    <attribute id="name" value="DDOD_Dungeon_TravelCost_Path2_Light" type="22" />
+                    <attribute id="type" value="Int" type="23" />
+                </node>
+                <node id="DialogVariable">
+                    <attribute id="DefaultValue" value="0" type="23" />
+                    <attribute id="Description" value="" type="23" />
+                    <attribute id="UUID" value="e6a030e2-88f8-429c-a619-11e6a42f4e33" type="31" />
+                    <attribute id="name" value="DDOD_Dungeon_TravelCost_Path3_Food" type="22" />
+                    <attribute id="type" value="Int" type="23" />
+                </node>
+                <node id="DialogVariable">
+                    <attribute id="DefaultValue" value="0" type="23" />
+                    <attribute id="Description" value="" type="23" />
+                    <attribute id="UUID" value="fd28a018-0622-4c71-beb5-bd10ac96f255" type="31" />
+                    <attribute id="name" value="DDOD_Dungeon_TravelCost_Path3_Light" type="22" />
+                    <attribute id="type" value="Int" type="23" />
+                </node>
+                <node id="DialogVariable">
+                    <attribute id="DefaultValue" value="0" type="23" />
+                    <attribute id="Description" value="" type="23" />
+                    <attribute id="UUID" value="0ba7086d-2297-455a-b407-c34787d50ea0" type="31" />
+                    <attribute id="name" value="DDOD_test" type="22" />
+                    <attribute id="type" value="Int" type="23" />
+                </node>
+            </children>
+        </node>
+    </region>
+</save>
